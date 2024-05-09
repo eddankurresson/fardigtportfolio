@@ -1,0 +1,109 @@
+@import "../app.scss";
+
+.parralax {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: 100px;
+        position: relative;
+        z-index: 10; 
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        @include mobile {
+            font-size: 50px; /* Hide on mobile */
+        }
+    }
+
+    .vatten {
+        background-image: url('/hav.png');
+        background-size: cover;
+        background-position: bottom;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+     
+    }
+
+    .träbåt {
+        background-image: url('/träbåt-removebg-preview.png');
+        background-size: cover;
+        position: absolute;
+        width: 30%;
+        height: 40vh;
+        bottom: 36%;
+        left: 5%;
+        z-index: 3;
+        @include mobile {
+            display: none; /* Hide on mobile */
+        }
+    }
+
+    .plastbåt {
+        background-image: url('/80båt-removebg-preview.png');
+        background-size: cover;
+        position: absolute;
+        width: 30%;
+        height: 30vh;
+        bottom: 48%;
+        right: 10%;
+        z-index: 3;
+        @include mobile {
+            display: none; /* Hide on mobile */
+        }
+    }
+
+    .windsurf {
+        background-image: url('/windsurf-removebg-preview.png');
+        background-size: cover;
+        position: absolute;
+        width: 3.5%;
+        height: 7.5vh;
+        top: 30%;
+        left: 8%;
+        transform: translateX(-50%);
+        z-index: 3;
+        @include mobile {
+            display: none; /* Hide on mobile */
+        }
+    }
+
+    .moln1 {
+        background-image: url('/moln1.png');
+        background-size: cover;
+        position: absolute;
+        width: 20vw;
+        height: 40vh;
+        top: 0.5vh;
+        left: 15%;
+        transform: translateX(-50%);
+        z-index: 4;
+        @include mobile {
+            display: none; /* Hide on mobile */
+        }
+    }
+    
+    .moln2 {
+        background-image: url('/moln1.png');
+        background-size: cover;
+        position: absolute;
+        width: 15vw;
+        height: 30vh;
+        top: 1vh;
+        left: 60%;
+        transform: translateX(-50%);
+        z-index: 4;
+        @include mobile {
+            display: none; /* Hide on mobile */
+        }
+    }
+
+    
+}

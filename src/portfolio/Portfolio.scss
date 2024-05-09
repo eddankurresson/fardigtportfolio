@@ -1,0 +1,91 @@
+@import "../app.scss";
+.portfolio {
+    .progress {
+        position: sticky;
+        top: 0;
+        left: 0;
+        padding-top: 50px;
+        text-align: center;
+        color: whitesmoke;
+        font-size: 36px;
+        z-index: 10;
+        
+        .progressbar {
+            height: 10px;
+            background-color: orange;
+            z-index: 10;
+        }
+    }
+
+    .container {
+        display: flex;
+        align-items: center; // Kontrollera om detta ska ändras till 'flex-start' om du vill att innehållet ska starta längre ned.
+        justify-content: center;
+        width: 100%;
+        padding-top: 150px; // Justerbar beroende på önskad effekt
+        overflow: hidden;
+        @include mobile {
+            padding-top: 10px; /* Hide on mobile */
+        }
+
+        .wrapper {
+            max-width: 100%;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            
+
+            .imageContainer {
+                flex: 1;
+                height: 50%; // Justera denna höjd om bilden tar för mycket vertikalt utrymme
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                @include mobile {
+                    display: none; /* Hide on mobile */
+                }
+            }
+            .textContainer {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                @include mobile {
+                    width: 100%;
+                    gap: 2px; /* Hide on mobile */
+                }
+
+                h2 {
+                    font-size: 72px;
+                    @include mobile {
+                        font-size: 30px; /* Hide on mobile */
+                    }
+                }
+                p {
+                    color: black;
+                    font-style: bold;
+                    font-size: 18px;
+                    @include mobile {
+                        font-size: 30px; /* Hide on mobile */
+                    }
+                    
+                }
+                button {
+                    background-color: orange;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 300px;
+                    cursor: pointer;
+                    @include mobile {
+                        display: none; /* Hide on mobile */
+                    }
+                }
+            }
+        }
+    }
+}

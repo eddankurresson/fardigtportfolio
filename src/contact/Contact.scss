@@ -1,0 +1,72 @@
+@import "../app.scss";
+.contact{
+    height: calc(100vh);
+    overflow: hidden;
+    background: linear-gradient(180deg, #78C8E5, lightblue);
+    position: relative;
+    @include mobile{
+        width: 100vw;
+    }
+    
+    .wrapper{
+        max-width: 1366px;
+        height: 100%;
+        margin: auto;
+    }
+
+    .textContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2{
+            font-size: 30px;
+            color: darkorange;
+            letter-spacing: 10px;
+
+        }
+        h1{
+            font-size: 88px;
+            @include mobile{
+                font-size: 35px;
+            }
+        }
+        .buttons{
+            button{
+                padding: 20px;
+                border: 1px solid black;
+                border-radius: 10px;
+                background-color: transparent;
+                color: black;
+                margin-right: 20px;
+                cursor: pointer;
+                font-weight: 300px;
+            }
+        }
+        img{
+            width: 50px;
+        }
+        
+    }
+
+    .imageContainer{
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        img{
+            width: 90%;
+
+        }
+    }
+    .slidingTextContainer{
+        position: absolute;
+        font-size: 50vh;
+        bottom: -120px;
+        white-space: nowrap;
+        color: #0230ff2a;
+        width: 50%;
+        font-weight: bold;
+    }
+}

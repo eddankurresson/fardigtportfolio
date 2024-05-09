@@ -1,0 +1,84 @@
+@import "../app.scss";
+.hero{
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    background: linear-gradient(180deg, lightblue, #78C8E5);
+    position: relative;
+    @include mobile{
+        width: 100vw;
+    }
+    
+    .wrapper{
+       
+        max-width: 1366px;
+        height: 100%;
+        margin: auto;
+    }
+
+    .textContainer{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 3;
+
+        h2{
+            font-size: 30px;
+            color: orange;
+            letter-spacing: 10px;
+
+        }
+        h1{
+            font-size: 88px;
+            z-index: 3;
+            @include mobile{
+                font-size: 66px;
+            }
+            
+        }
+        .buttons{
+            button{
+                padding: 20px;
+                border: 1px solid black;
+                border-radius: 10px;
+                background-color: transparent;
+                color: black;
+                margin-right: 20px;
+                cursor: pointer;
+                font-weight: 300px;
+            }
+        }
+        img{
+            width: 50px;
+        }
+        
+    }
+
+    .imageContainer{
+        @include mobile{
+            display: none;
+        }
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        img{
+            z-index: 1;
+            width: 90%;
+            align-items: right;
+            margin-left: 100px; /* Add this line to shift the image to the right */
+            margin-bottom: 200px;
+
+
+        }
+    }
+    .slidingTextContainer{
+        position: absolute;
+        font-size: 50vh;
+        bottom: -120px;
+        white-space: nowrap;
+        color: #0230ff2a;
+        width: 50%;
+        font-weight: bold;
+    }
+}

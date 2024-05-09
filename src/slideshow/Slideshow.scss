@@ -1,0 +1,54 @@
+@import "../app.scss";
+.slick-slide, .slick-track, .slick-list {
+  
+    border: none; /* Ensures that no borders are applied */
+}
+.sistapillen{
+  width: 60%;
+  @include mobile {
+    width: 200%; /* Hide on mobile */
+}
+
+}
+.slick-slide img {
+    width: 200%; /* Make the image twice as wide as the container */
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    @include mobile {
+      height: 30%; /* Hide on mobile */
+  }
+    
+  }
+  
+  /* Specific adjustments for the left and right sliders */
+  .slick-slider.left-slider .slick-slide img {
+    
+    margin-left: 0%; /* Show the first half of the image */
+  }
+  
+  .slick-slider.right-slider .slick-slide img {
+    margin-left: -100%; /* Shift the image to show the second half */
+   
+  }
+  
+  .slick-vertical .slick-slide {
+    height: 100vh; /* Ensure each slide covers full vertical space */
+    overflow: hidden; /* Clips the overflow to ensure only half is visible */
+    @include mobile {
+      height: 10vh; /* Hide on mobile */
+  }
+    
+  }
+  
+  /* Additional styles to ensure alignment and styling */
+  .slick-slider {
+    
+    background-color: orange;
+    font-family: "Roboto", sans-serif; /* Ensuring font consistency */
+    padding: 0; /* Remove any padding that might cause issues */
+    margin: 0; /* Remove any margin to eliminate space between sliders */
+    border: none; /* Remove borders */
+   
+  }
+  
+  
